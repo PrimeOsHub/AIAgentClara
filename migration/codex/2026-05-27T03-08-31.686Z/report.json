@@ -1,0 +1,82 @@
+{
+  "providerId": "codex",
+  "source": "C:\\Users\\Pugedo\\.codex",
+  "target": "C:\\Users\\Pugedo\\.openclaw\\workspace",
+  "summary": {
+    "total": 4,
+    "planned": 0,
+    "migrated": 4,
+    "skipped": 0,
+    "conflicts": 0,
+    "errors": 0,
+    "sensitive": 0
+  },
+  "items": [
+    {
+      "id": "skill:find-skills",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\find-skills",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\find-skills",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "find-skills",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:microsoft-foundry",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\microsoft-foundry",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\microsoft-foundry",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "microsoft-foundry",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:supabase",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\supabase",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\supabase",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "supabase",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:supabase-postgres-best-practices",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\supabase-postgres-best-practices",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\supabase-postgres-best-practices",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "supabase-postgres-best-practices",
+        "sourceLabel": "personal AgentSkill"
+      }
+    }
+  ],
+  "warnings": [
+    "Codex app-server plugin inventory discovery failed: codex app-server exited: code=1 signal=null stderr=\"file:///C:/Users/Pugedo/.openclaw/npm/node_modules/@openclaw/codex/node_modules/@openai/codex/bin/codex.js:100 throw new Error( ^ Error: Missing optional dependency @openai/codex-win32-x64. Reinstall Codex: npm install -g @openai/codex@latest at file:///C:/Users/Pugedo/.openclaw/npm/node_modules/@openclaw/codex/node_modules/@openai/codex/bin/codex.js:100:11 at ModuleJob.run (node:internal/modules/esm/module_job:437:25) at async node:internal/modules/esm/loader:639:26 at async asyncRunEntryPointW...\". Cached plugin bundles, if any, are advisory only."
+  ],
+  "nextSteps": [
+    "Run openclaw doctor after applying the migration.",
+    "Review skipped or auth-required Codex plugin/config/hook items before exposing them in OpenClaw sessions."
+  ],
+  "metadata": {
+    "agentDir": "C:\\Users\\Pugedo\\.openclaw\\agents\\main\\agent",
+    "codexHome": "C:\\Users\\Pugedo\\.codex",
+    "personalAgentsSkillsDir": "C:\\Users\\Pugedo\\.agents\\skills"
+  },
+  "backupPath": "C:\\Windows\\system32\\2026-05-27T03-08-31.687Z-openclaw-backup.tar.gz",
+  "reportDir": "C:\\Users\\Pugedo\\.openclaw\\migration\\codex\\2026-05-27T03-08-31.686Z"
+}
