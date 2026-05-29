@@ -1,0 +1,4 @@
+gateway:
+  agent:
+    model: openai/gpt-5.4-mini
+    harness: openai
