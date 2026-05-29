@@ -1,7 +1,7 @@
 //#region extensions/whatsapp/login-qr-runtime.ts
 let loginQrModulePromise = null;
 function loadLoginQrModule() {
-	loginQrModulePromise ??= import("./login-qr-l4UaR8Dj.js");
+	loginQrModulePromise ??= import("./login-qr-CdhkC9Ij.js");
 	return loginQrModulePromise;
 }
 async function startWebLoginWithQr(...args) {

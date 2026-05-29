@@ -1,2 +1,2 @@
-import { n as setWhatsAppRuntime } from "./runtime-CboC4QhQ.js";
+import { r as setWhatsAppRuntime } from "./runtime-BfAdAEYT.js";
 export { setWhatsAppRuntime };

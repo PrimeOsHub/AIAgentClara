@@ -1,0 +1,8 @@
+
+> launch-desk@0.1.0 dev:server
+> tsx watch src/server/index.ts
+
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+Launch Desk API listening on http://127.0.0.1:8787
+Model: gpt-5.4-mini
+OPENAI_API_KEY configured: true
