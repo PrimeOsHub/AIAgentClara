@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "fe81e10d-60e1-49f9-89e7-5c8096ca8e4c",
-    "updatedAt": 1780003838437,
+    "updatedAt": 1780042796174,
     "sessionStartedAt": 1779918944792,
     "systemSent": true,
     "abortedLastRun": false,
@@ -103,6 +103,7 @@
     "runtimeMs": 12448902,
     "authProfileOverride": "openai:default",
     "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 0
+    "authProfileOverrideCompactionCount": 0,
+    "lastInteractionAt": 1780042796172
   }
 }

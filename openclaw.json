@@ -102,6 +102,11 @@
       "openai:default": {
         "provider": "openai",
         "mode": "api_key"
+      },
+      "openai-codex:andrestallion@gmail.com": {
+        "provider": "openai-codex",
+        "mode": "oauth",
+        "email": "andrestallion@gmail.com"
       }
     }
   },
@@ -144,13 +149,13 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-05-27T04:00:37.293Z",
-    "lastRunVersion": "2026.5.22",
+    "lastRunAt": "2026-05-29T07:56:20.522Z",
+    "lastRunVersion": "2026.5.27",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
   "meta": {
     "lastTouchedVersion": "2026.5.27",
-    "lastTouchedAt": "2026-05-28T22:07:32.567Z"
+    "lastTouchedAt": "2026-05-29T07:56:20.660Z"
   }
 }

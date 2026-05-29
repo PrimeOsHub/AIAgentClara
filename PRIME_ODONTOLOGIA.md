@@ -18,8 +18,7 @@ Ha mais de um resultado publico com nome parecido em Belo Horizonte. Antes de co
 
 Possiveis dados publicos:
 
-- Prime Odontologia / Invisalign em Belo Horizonte: Alvares Cabral, 374, Belo Horizonte. Telefone exibido no site: 31992893060. E-mail: contato@primeodontologia.com.br.
-
+- Prime Odontologia / Invisalign em Belo Horizonte: Alvares Cabral, 374, Belo Horizonte. Telefone exibido no site: 31992893060. E-mail: <contato@primeodontologia.com.br>.
 
 ## Tratamentos citados em fontes publicas
 
