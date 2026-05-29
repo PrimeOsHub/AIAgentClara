@@ -1,20 +1,25 @@
-# Ignore python virtual environments
+@"
+# Node / WhatsApp Dependencies
+node_modules/
+**/node_modules/
+
+# Python Virtual Environments
 venv/
 .venv/
 env/
 __pycache__/
 *.pyc
 
-# Ignore environment variables and API keys
+# Environment Variables and Keys
 .env
 config.private.json
 
-# Ignore OpenClaw/system logs and temporary caches
+# OpenClaw System Logs and Caches
 logs/
 .cache/
 tmp/
 
-# Credential files and workspace settings
+# Credentials and Local Backups
 credentials/
 workspace/
 *.bak
@@ -22,13 +27,7 @@ workspace/
 *.json.last-good
 update-check.json
 
-# Ignore IDE/editor specific files
-@"
-npm/node_modules/
-extensions/node_modules/
-node_modules/
-*.bak
-*.bak.*
-*.json.last-good
+# IDE Settings
+.vscode/
+.idea/
 "@ | Out-File -FilePath .gitignore -Encoding utf8
-# Ignore OpenClaw/system logs and temporary caches
