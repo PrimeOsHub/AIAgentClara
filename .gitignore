@@ -1,0 +1,15 @@
+# Ignore python virtual environments
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Ignore environment variables and API keys
+.env
+config.private.json
+
+# Ignore OpenClaw/system logs and temporary caches
+logs/
+.cache/
+tmp/

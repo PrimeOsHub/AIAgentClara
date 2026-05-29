@@ -1,0 +1,156 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "C:\\Users\\Pugedo\\.openclaw\\workspace",
+      "models": {
+        "openai/gpt-4o": {
+          "alias": "GPT"
+        },
+        "openai/gpt-5.5": {
+          "alias": "GPT"
+        },
+        "openai/gpt-4.1-mini": {}
+      },
+      "model": {
+        "primary": "openai/gpt-4.1-mini"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "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"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "messages": {
+    "statusReactions": {
+      "enabled": true
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "duckduckgo",
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "openai": {
+        "enabled": true
+      },
+      "codex": {
+        "enabled": true,
+        "config": {
+          "codexPlugins": {
+            "enabled": true,
+            "allow_destructive_actions": true,
+            "plugins": {
+              "figma": {
+                "enabled": true,
+                "marketplaceName": "openai-curated",
+                "pluginName": "figma"
+              },
+              "github": {
+                "enabled": true,
+                "marketplaceName": "openai-curated",
+                "pluginName": "github"
+              },
+              "openai-developers": {
+                "enabled": true,
+                "marketplaceName": "openai-curated",
+                "pluginName": "openai-developers"
+              }
+            }
+          }
+        }
+      },
+      "duckduckgo": {
+        "enabled": true
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "selfChatMode": false,
+      "dmPolicy": "pairing"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "goplaces": {
+        "apiKey": "IOzGbIql4Ko0yf1c_FAloZoUUN0="
+      }
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "compaction-notifier": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-05-27T04:00:37.293Z",
+    "lastRunVersion": "2026.5.22",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.5.27",
+    "lastTouchedAt": "2026-05-28T22:07:32.567Z"
+  }
+}
