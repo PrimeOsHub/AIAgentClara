@@ -30,3 +30,20 @@ update-check.json
 .vscode/
 .idea/
 
+# Local OpenClaw runtime and workspace state
+.openclaw.code-workspace
+gateway.cmd
+openclaw.json
+openclaw.json.bak
+openclaw.json.bak.*
+
+agents/
+control-ui-custom/
+extensions/
+flows/
+identity/
+npm/
+plugin-skills/
+tasks/
+tools/
+

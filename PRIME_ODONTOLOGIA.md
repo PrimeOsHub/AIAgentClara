@@ -19,7 +19,7 @@ Ha mais de um resultado publico com nome parecido em Belo Horizonte. Antes de co
 Possiveis dados publicos:
 
 - Prime Odontologia / Invisalign em Belo Horizonte: Alvares Cabral, 374, Belo Horizonte. Telefone exibido no site: 31992893060. E-mail: contato@primeodontologia.com.br.
-- Prime Odontologia Especializada / Dra. Michelle Vieira: Rua Cyro Vaz de Melo, 551 - Dona Clara, Belo Horizonte - MG, 31255-840. Telefone exibido no site: (31) 98877-1943.
+
 
 ## Tratamentos citados em fontes publicas
 
