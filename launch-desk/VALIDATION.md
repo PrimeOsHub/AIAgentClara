@@ -26,5 +26,9 @@
 - [ ] `POST /api/agent/plan` returns `text/event-stream`.
 - [ ] End-to-end verification receives at least one `tool_progress` event.
 - [ ] End-to-end verification receives at least one `text_delta` event.
+- [ ] End-to-end verification reaches `final` and includes the required launch-plan sections.
+- [ ] Re-running an identical brief within `PLAN_CACHE_TTL_MS` replays a cached stream without exposing raw SDK errors.
+- [ ] Closing the browser or cancelling a request aborts server-side work.
 - [ ] Unit tests cover task extraction, readiness scoring, owner checklists, and channel copy generation.
+- [ ] Unit tests cover SSE parsing, cache keys, and public error mapping.
 - [ ] Tracing remains enabled server-side unless `OPENAI_AGENTS_DISABLE_TRACING=1` is set intentionally.

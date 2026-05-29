@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "fe81e10d-60e1-49f9-89e7-5c8096ca8e4c",
-    "updatedAt": 1780062983548,
+    "updatedAt": 1780065083319,
     "sessionStartedAt": 1779918944792,
     "systemSent": true,
     "abortedLastRun": false,
@@ -102,13 +102,13 @@
           "name": "whatsapp-instagram-google"
         }
       ],
-      "version": 1780061074385
+      "version": 0
     },
     "status": "failed",
     "startedAt": 1779991374367,
     "endedAt": 1780062968518,
     "runtimeMs": 71594151,
-    "lastInteractionAt": 1780060362952,
+    "lastInteractionAt": 1780065083319,
     "authProfileOverride": "openai-codex:andrestallion@gmail.com",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0

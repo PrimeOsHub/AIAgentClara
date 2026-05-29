@@ -5,7 +5,7 @@
   "compatRegistryVersion": "eef6cd84d729e15c927d0140bbf513e308915ea0ed03fde8e19a170b51ffe2ba",
   "migrationVersion": 1,
   "policyHash": "a9404fc9814362382a975fa0c39fb0a8c01dbd43255bd9a20bedf52376333218",
-  "generatedAtMs": 1780058257197,
+  "generatedAtMs": 1780065232922,
   "refreshReason": "migration",
   "installRecords": {
     "codex": {
@@ -3254,7 +3254,7 @@
       "manifestFile": {
         "size": 13216,
         "mtimeMs": 1779851226825.7192,
-        "ctimeMs": 1780005803503.8518
+        "ctimeMs": 1780062514804.035
       },
       "source": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex\\dist\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex",
@@ -3297,7 +3297,7 @@
         "fileSignature": {
           "size": 1199,
           "mtimeMs": 1779851226825.7192,
-          "ctimeMs": 1780005803503.8518
+          "ctimeMs": 1780062514804.035
         }
       }
     },
@@ -3308,7 +3308,7 @@
       "manifestFile": {
         "size": 52969,
         "mtimeMs": 1779852152190.2676,
-        "ctimeMs": 1780005805050.785
+        "ctimeMs": 1780062515768.3665
       },
       "source": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu\\dist\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu",
@@ -3360,7 +3360,7 @@
         "fileSignature": {
           "size": 1601,
           "mtimeMs": 1779852152273.3337,
-          "ctimeMs": 1780005805050.785
+          "ctimeMs": 1780062515768.3665
         }
       }
     },
@@ -3371,7 +3371,7 @@
       "manifestFile": {
         "size": 22239,
         "mtimeMs": 1780058119635.637,
-        "ctimeMs": 1780058119637.777
+        "ctimeMs": 1780062498741.0107
       },
       "source": "C:\\Users\\Pugedo\\.openclaw\\extensions\\whatsapp\\dist\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\.openclaw\\extensions\\whatsapp",
@@ -3434,7 +3434,7 @@
         "fileSignature": {
           "size": 1933,
           "mtimeMs": 1780058119846.0627,
-          "ctimeMs": 1780058119861.685
+          "ctimeMs": 1780062498742.0078
         }
       }
     }

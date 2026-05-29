@@ -15,7 +15,7 @@ export type StreamEvent =
   | { type: 'tool_progress'; toolName: string; phase: 'started' | 'completed'; summary?: string }
   | { type: 'text_delta'; delta: string }
   | { type: 'final'; text: string }
-  | { type: 'error'; message: string };
+  | { type: 'error'; message: string; code?: string; retryable?: boolean };
 
 export type ReadinessScore = {
   score: number;

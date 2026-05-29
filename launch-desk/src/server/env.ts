@@ -15,5 +15,7 @@ export const env = {
   port: Number(process.env.PORT || 8787),
   clientOrigin: process.env.CLIENT_ORIGIN || 'http://127.0.0.1:5173',
   hasOpenAIKey: Boolean(process.env.OPENAI_API_KEY),
-  model: process.env.OPENAI_MODEL || 'gpt-5.4-mini'
+  model: process.env.OPENAI_MODEL || 'gpt-5.4-mini',
+  requestTimeoutMs: Number(process.env.REQUEST_TIMEOUT_MS || 90_000),
+  cacheTtlMs: Number(process.env.PLAN_CACHE_TTL_MS || 5 * 60_000)
 };

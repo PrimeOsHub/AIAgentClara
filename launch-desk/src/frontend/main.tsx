@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AlertTriangle, CalendarDays, CheckCircle2, ClipboardList, Loader2, Megaphone, Rocket, Send, ShieldCheck, Sparkles } from 'lucide-react';
 import type { LaunchBrief, StreamEvent } from '../shared/types';
+import { parseSseEvents } from '../shared/sse';
 import './styles.css';
 
 const sampleBrief: LaunchBrief = {
@@ -14,25 +15,13 @@ const sampleBrief: LaunchBrief = {
   availableAssets: 'Figma mockups, beta feedback notes, demo recording, analytics dashboard draft, product FAQ outline'
 };
 
-function parseSseChunk(buffer: string, onEvent: (event: StreamEvent) => void) {
-  const parts = buffer.split('\n\n');
-  const rest = parts.pop() || '';
-  for (const part of parts) {
-    const line = part
-      .split('\n')
-      .find((item) => item.startsWith('data: '));
-    if (!line) continue;
-    onEvent(JSON.parse(line.slice(6)) as StreamEvent);
-  }
-  return rest;
-}
-
 function App() {
   const [brief, setBrief] = useState<LaunchBrief>(sampleBrief);
   const [events, setEvents] = useState<StreamEvent[]>([]);
   const [answer, setAnswer] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [error, setError] = useState('');
+  const activeRequest = useRef<AbortController | null>(null);
 
   const toolEvents = useMemo(() => events.filter((event) => event.type === 'tool_progress'), [events]);
   const status = useMemo(() => [...events].reverse().find((event) => event.type === 'status'), [events]);
@@ -43,16 +32,20 @@ function App() {
 
   async function submitPlan(event: React.FormEvent) {
     event.preventDefault();
+    activeRequest.current?.abort();
     setIsRunning(true);
     setError('');
     setEvents([]);
     setAnswer('');
+    const controller = new AbortController();
+    activeRequest.current = controller;
 
     try {
       const response = await fetch('/api/agent/plan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(brief)
+        body: JSON.stringify(brief),
+        signal: controller.signal
       });
 
       if (!response.ok || !response.body) {
@@ -68,7 +61,7 @@ function App() {
         if (done) break;
 
         buffer += decoder.decode(value, { stream: true });
-        buffer = parseSseChunk(buffer, (streamEvent) => {
+        buffer = parseSseEvents(buffer, (streamEvent) => {
           setEvents((current) => [...current, streamEvent]);
           if (streamEvent.type === 'text_delta') {
             setAnswer((current) => current + streamEvent.delta);
@@ -79,11 +72,20 @@ function App() {
         });
       }
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : 'Unexpected error');
+      if (!(caught instanceof DOMException && caught.name === 'AbortError')) {
+        setError(caught instanceof Error ? caught.message : 'Unexpected error');
+      }
     } finally {
-      setIsRunning(false);
+      if (activeRequest.current === controller) {
+        activeRequest.current = null;
+        setIsRunning(false);
+      }
     }
   }
+
+  useEffect(() => {
+    return () => activeRequest.current?.abort();
+  }, []);
 
   return (
     <main className="app-shell">

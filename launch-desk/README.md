@@ -60,9 +60,11 @@ References:
 
    ```bash
    OPENAI_API_KEY=sk-proj-...
-   OPENAI_MODEL=gpt-5.4-mini
-   PORT=8787
-   CLIENT_ORIGIN=http://127.0.0.1:5173
+OPENAI_MODEL=gpt-5.4-mini
+PORT=8787
+CLIENT_ORIGIN=http://127.0.0.1:5173
+REQUEST_TIMEOUT_MS=90000
+PLAN_CACHE_TTL_MS=300000
    ```
 
    In this OpenClaw workspace, the server also falls back to `../credentials/openai_project_api_key.env` if `.env` is absent.
@@ -126,6 +128,8 @@ npm run verify:stream
 ```
 
 The verification script posts a realistic launch brief to `http://127.0.0.1:8787/api/agent/plan` and reads the stream until it receives at least one `tool_progress` event and one `text_delta` event. This is intentionally stronger than a health check.
+
+The API also aborts work when the client disconnects, applies a configurable request timeout, maps common OpenAI failures to user-safe error events, and replays cached stream events for identical briefs during the cache TTL.
 
 ## Extending Launch Desk
 

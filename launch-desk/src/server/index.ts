@@ -1,8 +1,11 @@
 import cors from 'cors';
 import express from 'express';
 import { runLaunchDeskStream } from '../agent/launchAgent';
+import { encodeSse } from '../shared/sse';
 import { launchBriefSchema, type StreamEvent } from '../shared/types';
+import { cacheKeyForBrief, getCachedPlan, setCachedPlan } from './cache';
 import { env } from './env';
+import { isAbortLike, publicAgentError } from './errors';
 
 const app = express();
 
@@ -10,7 +13,7 @@ app.use(cors({ origin: env.clientOrigin }));
 app.use(express.json({ limit: '1mb' }));
 
 function writeSse(res: express.Response, event: StreamEvent) {
-  res.write(`data: ${JSON.stringify(event)}\n\n`);
+  res.write(encodeSse(event));
 }
 
 app.get('/api/health', (_req, res) => {
@@ -44,14 +47,36 @@ app.post('/api/agent/plan', async (req, res) => {
 
   writeSse(res, { type: 'status', message: 'Launch Desk agent started' });
 
+  const cacheKey = cacheKeyForBrief(parsed.data);
+  const cachedEvents = getCachedPlan(cacheKey);
+  if (cachedEvents) {
+    writeSse(res, { type: 'status', message: 'Replaying cached launch plan' });
+    for (const event of cachedEvents) writeSse(res, event);
+    res.end();
+    return;
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), env.requestTimeoutMs);
+  res.on('close', () => {
+    if (!res.writableEnded) controller.abort();
+  });
+
+  const streamedEvents: StreamEvent[] = [];
+
   try {
-    for await (const event of runLaunchDeskStream(parsed.data)) {
+    for await (const event of runLaunchDeskStream(parsed.data, { signal: controller.signal })) {
+      streamedEvents.push(event);
       writeSse(res, event);
     }
+    setCachedPlan(cacheKey, streamedEvents, env.cacheTtlMs);
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unknown agent error';
-    writeSse(res, { type: 'error', message });
+    if (!isAbortLike(error) || !res.writableEnded) {
+      const publicError = publicAgentError(error);
+      writeSse(res, { type: 'error', ...publicError });
+    }
   } finally {
+    clearTimeout(timeout);
     res.end();
   }
 });

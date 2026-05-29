@@ -16,15 +16,28 @@ Turn rough launch ideas into actionable release plans. Always use the provided p
 3. generate_owner_checklists
 4. draft_channel_copy
 
-Your final response must be structured with these sections:
-- Prioritized release plan
-- Risk register
-- Owner checklist
-- Launch copy suggestions
-- Follow-up questions
+Your final response must use this exact Markdown skeleton and keep every heading unchanged:
+
+## Prioritized release plan
+
+## Risk register
+
+## Owner checklist
+
+## Launch copy suggestions
+
+## Follow-up questions
+
+Keep the response concise enough for a release team to scan quickly: roughly 700-1,100 words unless the brief is unusually complex.
 
 Be concrete and decision-oriented. If key details are missing, still provide a useful provisional plan and ask focused follow-up questions. Avoid pretending that dates, owners, metrics, or legal approvals are known if the user did not provide them.
 `,
+  modelSettings: {
+    parallelToolCalls: true,
+    maxTokens: 2500,
+    reasoning: { effort: 'low' },
+    text: { verbosity: 'medium' }
+  },
   tools: launchPlanningTools
 });
 
@@ -48,12 +61,10 @@ ${brief.availableAssets || 'None provided'}
 }
 
 function toolNameFromEvent(event: unknown): string | null {
-  const item = (event as { item?: { type?: string; name?: string; rawItem?: { name?: string } } }).item;
+  const item = (event as { item?: { type?: string; name?: string; rawItem?: { name?: string }; output?: unknown } }).item;
   if (!item) return null;
-  if (item.type && /tool/i.test(item.type)) {
-    return item.name || item.rawItem?.name || item.type;
-  }
-  return null;
+  if (!item.type || !/tool/i.test(item.type)) return null;
+  return item.name || item.rawItem?.name || item.type;
 }
 
 function textDeltaFromEvent(event: unknown): string | null {
@@ -77,7 +88,36 @@ function textDeltaFromEvent(event: unknown): string | null {
   return null;
 }
 
-export async function* runLaunchDeskStream(brief: LaunchBrief): AsyncGenerator<StreamEvent> {
+function rawToolProgressFromEvent(event: unknown): { toolName: string; phase: 'started' | 'completed' } | null {
+  const raw = event as {
+    type?: string;
+    data?: {
+      event?: {
+        type?: string;
+        item?: {
+          type?: string;
+          name?: string;
+        };
+      };
+    };
+  };
+
+  if (raw.type !== 'raw_model_stream_event') return null;
+  const modelEvent = raw.data?.event;
+  if (modelEvent?.item?.type !== 'function_call' || !modelEvent.item.name) return null;
+
+  if (modelEvent.type === 'response.output_item.added') {
+    return { toolName: modelEvent.item.name, phase: 'started' };
+  }
+
+  if (modelEvent.type === 'response.output_item.done') {
+    return { toolName: modelEvent.item.name, phase: 'completed' };
+  }
+
+  return null;
+}
+
+export async function* runLaunchDeskStream(brief: LaunchBrief, options: { signal?: AbortSignal } = {}): AsyncGenerator<StreamEvent> {
   yield { type: 'status', message: 'Preparing launch context' };
 
   let finalText = '';
@@ -90,19 +130,44 @@ export async function* runLaunchDeskStream(brief: LaunchBrief): AsyncGenerator<S
   });
 
   try {
-    const stream = await runner.run(launchDeskAgent, formatBriefInput(brief), { stream: true });
+    const stream = await runner.run(launchDeskAgent, formatBriefInput(brief), {
+      stream: true,
+      signal: options.signal,
+      maxTurns: 8
+    });
 
     for await (const event of stream) {
+      const rawToolProgress = rawToolProgressFromEvent(event);
+      if (rawToolProgress?.phase === 'started' && !seenToolStarts.has(rawToolProgress.toolName)) {
+        seenToolStarts.add(rawToolProgress.toolName);
+        yield {
+          type: 'tool_progress',
+          toolName: rawToolProgress.toolName,
+          phase: 'started',
+          summary: 'Tool call started'
+        };
+      }
+
+      if (rawToolProgress?.phase === 'completed' && !seenToolCompletions.has(rawToolProgress.toolName)) {
+        seenToolCompletions.add(rawToolProgress.toolName);
+        yield {
+          type: 'tool_progress',
+          toolName: rawToolProgress.toolName,
+          phase: 'completed',
+          summary: 'Tool call completed'
+        };
+      }
+
       const toolName = toolNameFromEvent(event);
       const eventType = (event as { type?: string }).type;
-      const itemType = (event as { item?: { type?: string } }).item?.type || '';
+      const eventName = (event as { name?: string }).name || '';
 
-      if (toolName && eventType === 'run_item_stream_event' && /call/i.test(itemType) && !seenToolStarts.has(toolName)) {
+      if (toolName && eventType === 'run_item_stream_event' && eventName === 'tool_called' && !seenToolStarts.has(toolName)) {
         seenToolStarts.add(toolName);
         yield { type: 'tool_progress', toolName, phase: 'started', summary: 'Tool call started' };
       }
 
-      if (toolName && eventType === 'run_item_stream_event' && /output|result/i.test(itemType) && !seenToolCompletions.has(toolName)) {
+      if (toolName && eventType === 'run_item_stream_event' && eventName === 'tool_output' && !seenToolCompletions.has(toolName)) {
         seenToolCompletions.add(toolName);
         yield { type: 'tool_progress', toolName, phase: 'completed', summary: 'Tool output received' };
       }
@@ -113,6 +178,8 @@ export async function* runLaunchDeskStream(brief: LaunchBrief): AsyncGenerator<S
         yield { type: 'text_delta', delta };
       }
     }
+
+    await stream.completed;
 
     if ('finalOutput' in stream && typeof stream.finalOutput === 'string' && !finalText.trim()) {
       finalText = stream.finalOutput;
