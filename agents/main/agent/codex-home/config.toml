@@ -1,0 +1,11 @@
+[projects.'c:\users\pugedo\.openclaw\workspace']
+trust_level = "trusted"
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."openai-developers@openai-curated"]
+enabled = true
