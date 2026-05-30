@@ -1,7 +1,7 @@
 {
-  "fetched_at": "2026-05-29T15:06:18.651449Z",
-  "etag": "W/\"6582994961857135be5cb76c6f2290f1\"",
-  "client_version": "0.132.0",
+  "fetched_at": "2026-05-30T06:38:56.404929700Z",
+  "etag": "W/\"97baca979338868b74b0091642c3d1e7\"",
+  "client_version": "0.134.0",
   "models": [
     {
       "slug": "gpt-5.5",

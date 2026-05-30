@@ -1,9 +1,5 @@
 {
   "private": true,
-  "dependencies": {
-    "@openclaw/codex": "2026.5.22",
-    "@openclaw/feishu": "2026.5.22"
-  },
   "overrides": {
     "axios": "1.16.0",
     "fast-uri": "3.1.2",
@@ -21,5 +17,8 @@
       "node-domexception",
       "uuid"
     ]
+  },
+  "dependencies": {
+    "@openclaw/codex": "2026.5.27"
   }
 }

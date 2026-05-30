@@ -4,27 +4,22 @@
   "hostContractVersion": "2026.5.27",
   "compatRegistryVersion": "eef6cd84d729e15c927d0140bbf513e308915ea0ed03fde8e19a170b51ffe2ba",
   "migrationVersion": 1,
-  "policyHash": "a9404fc9814362382a975fa0c39fb0a8c01dbd43255bd9a20bedf52376333218",
-  "generatedAtMs": 1780065232922,
+  "policyHash": "ae0bac3d2b48b7d7d4ee1a3e4bd7c310f3270716d2d84c02807a05a7df9be072",
+  "generatedAtMs": 1780122852149,
   "refreshReason": "migration",
   "installRecords": {
     "codex": {
       "source": "npm",
-      "spec": "@openclaw/codex@2026.5.22",
+      "spec": "@openclaw/codex",
       "installPath": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex",
-      "version": "2026.5.22",
+      "version": "2026.5.27",
       "resolvedName": "@openclaw/codex",
-      "resolvedVersion": "2026.5.22",
-      "resolvedSpec": "@openclaw/codex@2026.5.22"
-    },
-    "feishu": {
-      "source": "npm",
-      "spec": "@openclaw/feishu@2026.5.22",
-      "installPath": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu",
-      "version": "2026.5.22",
-      "resolvedName": "@openclaw/feishu",
-      "resolvedVersion": "2026.5.22",
-      "resolvedSpec": "@openclaw/feishu@2026.5.22"
+      "resolvedVersion": "2026.5.27",
+      "resolvedSpec": "@openclaw/codex@2026.5.27",
+      "integrity": "sha512-KirslWv/MeRQLZCvZuHVw9uXNfMhYrQ0R93W95MFyciSXvpTBlv4CWIIbyfMG8kItKUXgYfjL7BHlbmJJE28Nw==",
+      "shasum": "ca90f36b2e3d8753ebeb542dc95096e86176e274",
+      "resolvedAt": "2026-05-30T06:31:51.188Z",
+      "installedAt": "2026-05-30T06:32:25.811Z"
     },
     "whatsapp": {
       "source": "clawhub",
@@ -114,7 +109,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\alibaba\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\alibaba",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -149,7 +144,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\anthropic\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\anthropic",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -189,7 +184,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\arcee\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\arcee",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -224,7 +219,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\azure-speech\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\azure-speech",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -329,7 +324,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\byteplus\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\byteplus",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -397,7 +392,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\cerebras\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\cerebras",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -432,7 +427,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\chutes\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\chutes",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -518,7 +513,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\cloudflare-ai-gateway\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\cloudflare-ai-gateway",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -553,7 +548,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\comfy\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\comfy",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -588,7 +583,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\copilot-proxy\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\copilot-proxy",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -621,7 +616,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepgram\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepgram",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -656,7 +651,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepinfra\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepinfra",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -691,7 +686,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepseek\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\deepseek",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -748,7 +743,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\document-extract\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\document-extract",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -813,7 +808,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\elevenlabs\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\elevenlabs",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -882,7 +877,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\fal\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\fal",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -984,7 +979,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\fireworks\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\fireworks",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1019,7 +1014,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\github-copilot\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\github-copilot",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1054,7 +1049,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\google\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\google",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1125,7 +1120,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\groq\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\groq",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1158,7 +1153,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\huggingface\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\huggingface",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1253,7 +1248,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\inworld\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\inworld",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1349,7 +1344,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\kilocode\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\kilocode",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1384,7 +1379,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\kimi-coding\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\kimi-coding",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1419,7 +1414,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\litellm\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\litellm",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1486,7 +1481,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\lmstudio\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\lmstudio",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1635,7 +1630,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\microsoft\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\microsoft",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1668,7 +1663,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\microsoft-foundry\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\microsoft-foundry",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1767,7 +1762,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\minimax\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\minimax",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1802,7 +1797,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\mistral\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\mistral",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1837,7 +1832,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\moonshot\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\moonshot",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1872,7 +1867,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\nvidia\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\nvidia",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -1941,7 +1936,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\ollama\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\ollama",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2046,7 +2041,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\opencode\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\opencode",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2081,7 +2076,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\opencode-go\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\opencode-go",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2116,7 +2111,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\openrouter\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\openrouter",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2241,7 +2236,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\qianfan\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\qianfan",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2274,7 +2269,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\qwen\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\qwen",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2309,7 +2304,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\runway\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\runway",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2376,7 +2371,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\senseaudio\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\senseaudio",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2411,7 +2406,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\sglang\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\sglang",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2536,7 +2531,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\stepfun\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\stepfun",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2569,7 +2564,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\synthetic\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\synthetic",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2724,7 +2719,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\tencent\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\tencent",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2780,7 +2775,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\together\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\together",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2847,7 +2842,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\tts-local-cli\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\tts-local-cli",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2880,7 +2875,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\venice\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\venice",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2913,7 +2908,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vercel-ai-gateway\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vercel-ai-gateway",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2948,7 +2943,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vllm\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vllm",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -2983,7 +2978,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\volcengine\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\volcengine",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3018,7 +3013,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\voyage\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\voyage",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3053,7 +3048,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vydra\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\vydra",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3088,7 +3083,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\web-readability\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\web-readability",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3153,7 +3148,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\xai\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\xai",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3191,7 +3186,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\xiaomi\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\xiaomi",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3226,7 +3221,7 @@
       "source": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\zai\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\AppData\\Roaming\\npm\\node_modules\\openclaw\\dist\\extensions\\zai",
       "origin": "bundled",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,
@@ -3250,11 +3245,11 @@
     {
       "pluginId": "codex",
       "manifestPath": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex\\openclaw.plugin.json",
-      "manifestHash": "9bfb9336d947d7eb963f7f7492f15c236594034f4442db69f15ef852fc78d145",
+      "manifestHash": "72c7382648428c660065245c28cca8338901a04d6bd8dbbd755fd58c6ac81dbe",
       "manifestFile": {
-        "size": 13216,
-        "mtimeMs": 1779851226825.7192,
-        "ctimeMs": 1780062514804.035
+        "size": 13248,
+        "mtimeMs": 1780122714910.2156,
+        "ctimeMs": 1780122714910.2156
       },
       "source": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex\\dist\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\codex",
@@ -3275,8 +3270,8 @@
         "codex"
       ],
       "packageName": "@openclaw/codex",
-      "packageVersion": "2026.5.22",
-      "installRecordHash": "a4c4141f6adbdc29f65c5c747de66603f004cb085c457dc4339e1cd9468623e3",
+      "packageVersion": "2026.5.27",
+      "installRecordHash": "d433bfaa605b5bc335b0b6fb12a8e34e7fa023a44b28c40d7ca8b0dd1730c0d9",
       "packageInstall": {
         "defaultChoice": "npm",
         "npm": {
@@ -3293,74 +3288,11 @@
       },
       "packageJson": {
         "path": "package.json",
-        "hash": "348c86566896f92a857552cc047c4b09e6404d2b557f3c6fc3836abdf5bd6050",
+        "hash": "4e603f56bd6e9261b59d50867a14228d2f5d33e365f407cc227401fd010c1920",
         "fileSignature": {
-          "size": 1199,
-          "mtimeMs": 1779851226825.7192,
-          "ctimeMs": 1780062514804.035
-        }
-      }
-    },
-    {
-      "pluginId": "feishu",
-      "manifestPath": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu\\openclaw.plugin.json",
-      "manifestHash": "0ad891dda411e1513b12c5711a2d6b37c276b9a112a4dbaa4385387b13fa411a",
-      "manifestFile": {
-        "size": 52969,
-        "mtimeMs": 1779852152190.2676,
-        "ctimeMs": 1780062515768.3665
-      },
-      "source": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu\\dist\\index.js",
-      "rootDir": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu",
-      "origin": "global",
-      "enabled": true,
-      "startup": {
-        "sidecar": false,
-        "memory": false,
-        "deferConfiguredChannelFullLoadUntilAfterListen": false,
-        "agentHarnesses": []
-      },
-      "compat": [
-        "channel-env-vars"
-      ],
-      "setupSource": "C:\\Users\\Pugedo\\.openclaw\\npm\\node_modules\\@openclaw\\feishu\\dist\\setup-entry.js",
-      "packageName": "@openclaw/feishu",
-      "packageVersion": "2026.5.22",
-      "installRecordHash": "7a66a5d4b3a045caa8a8e68d74b5be93fb4034f1255ed821e3a8885581c1a097",
-      "packageInstall": {
-        "defaultChoice": "npm",
-        "npm": {
-          "spec": "@openclaw/feishu",
-          "packageName": "@openclaw/feishu",
-          "selectorKind": "none",
-          "exactVersion": false,
-          "pinState": "floating-without-integrity"
-        },
-        "warnings": [
-          "npm-spec-floating",
-          "npm-spec-missing-integrity"
-        ]
-      },
-      "packageChannel": {
-        "id": "feishu",
-        "label": "Feishu",
-        "selectionLabel": "Feishu/Lark (飞书)",
-        "docsPath": "/channels/feishu",
-        "docsLabel": "feishu",
-        "blurb": "飞书/Lark enterprise messaging with doc/wiki/drive tools.",
-        "aliases": [
-          "lark"
-        ],
-        "order": 35,
-        "quickstartAllowFrom": true
-      },
-      "packageJson": {
-        "path": "package.json",
-        "hash": "684546fdd3b76d0beb484f8946e8984435ef19852ee00c90cbecc647c46b14f6",
-        "fileSignature": {
-          "size": 1601,
-          "mtimeMs": 1779852152273.3337,
-          "ctimeMs": 1780062515768.3665
+          "size": 1248,
+          "mtimeMs": 1780122714910.2156,
+          "ctimeMs": 1780122714910.2156
         }
       }
     },
@@ -3376,7 +3308,7 @@
       "source": "C:\\Users\\Pugedo\\.openclaw\\extensions\\whatsapp\\dist\\index.js",
       "rootDir": "C:\\Users\\Pugedo\\.openclaw\\extensions\\whatsapp",
       "origin": "global",
-      "enabled": true,
+      "enabled": false,
       "startup": {
         "sidecar": false,
         "memory": false,

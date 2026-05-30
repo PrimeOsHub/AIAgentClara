@@ -1,6 +1,9 @@
 [projects.'c:\users\pugedo\.openclaw\workspace']
 trust_level = "trusted"
 
+[projects.'c:\users\pugedo\.openclaw']
+trust_level = "trusted"
+
 [plugins."figma@openai-curated"]
 enabled = true
 

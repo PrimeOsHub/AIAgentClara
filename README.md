@@ -19,3 +19,10 @@ This repository contains the OpenClaw AI agent workspace for Clara, the virtual 
 - The `workspace/` directory is intentionally ignored by `.gitignore` and is not part of the tracked repo. It contains local OpenClaw workspace files and runtime state.
 - Do not commit credentials, auth state, or local node_modules directories.
 - Use this repository as the canonical GitHub structure for the Clara agent.
+
+## CLARA WhatsApp / OpenClaw / Codex Integration
+
+- `docs/clara-whatsapp-config.json` stores the structured WhatsApp prompt configuration.
+- `docs/clara-openai-prompt.md` stores the OpenAI Prompt ID/version reference.
+- `docs/openclaw-codex-clara-integration.md` explains how CLARA is connected to OpenClaw and Codex.
+- `workspace/CLARA_WHATSAPP_PROMPT.md` is the runtime prompt used by OpenClaw/Codex for WhatsApp behavior.

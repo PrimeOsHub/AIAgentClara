@@ -4,7 +4,9 @@
       "workspace": "C:\\Users\\Pugedo\\.openclaw\\workspace",
       "models": {
         "openai/gpt-5.4-mini": {
-          "alias": "GPT"
+          "alias": "GPT",
+          "thinking": "off",
+          "fast": true
         },
         "openai/gpt-5.5": {}
       },
@@ -26,7 +28,7 @@
       "resetOnExit": false
     },
     "controlUi": {
-      "allowInsecureAuth": true
+      "allowInsecureAuth": false
     },
     "nodes": {
       "denyCommands": [
@@ -39,7 +41,11 @@
         "sms.send",
         "sms.search"
       ]
-    }
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "::1"
+    ]
   },
   "session": {
     "dmScope": "per-channel-peer"
@@ -63,36 +69,26 @@
       "openai": {
         "enabled": true
       },
-      "codex": {
-        "enabled": true,
-        "config": {
-          "codexPlugins": {
-            "enabled": true,
-            "allow_destructive_actions": true,
-            "plugins": {
-              "figma": {
-                "enabled": true,
-                "marketplaceName": "openai-curated",
-                "pluginName": "figma"
-              },
-              "github": {
-                "enabled": true,
-                "marketplaceName": "openai-curated",
-                "pluginName": "github"
-              },
-              "openai-developers": {
-                "enabled": true,
-                "marketplaceName": "openai-curated",
-                "pluginName": "openai-developers"
-              }
-            }
-          }
-        }
-      },
       "duckduckgo": {
         "enabled": true
+      },
+      "codex": {
+        "enabled": true
       }
-    }
+    },
+    "allow": [
+      "browser",
+      "canvas",
+      "device-pair",
+      "duckduckgo",
+      "file-transfer",
+      "memory-core",
+      "phone-control",
+      "talk-voice",
+      "openai",
+      "codex"
+    ],
+    "bundledDiscovery": "compat"
   },
   "auth": {
     "profiles": {
@@ -267,13 +263,13 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-05-29T15:07:06.161Z",
+    "lastRunAt": "2026-05-30T06:34:29.845Z",
     "lastRunVersion": "2026.5.27",
-    "lastRunCommand": "onboard",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "meta": {
     "lastTouchedVersion": "2026.5.27",
-    "lastTouchedAt": "2026-05-29T15:07:06.186Z"
+    "lastTouchedAt": "2026-05-30T06:34:29.879Z"
   }
 }

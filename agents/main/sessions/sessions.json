@@ -1,9 +1,9 @@
 {
   "agent:main:main": {
     "sessionId": "489a934f-9b3d-4622-bee7-231ee30b7eae",
-    "updatedAt": 1780067369405,
+    "updatedAt": 1780123141378,
     "sessionStartedAt": 1780067348240,
-    "lastInteractionAt": 1780067348240,
+    "lastInteractionAt": 1780123133531,
     "systemSent": true,
     "abortedLastRun": false,
     "usageFamilyKey": "agent:main:main",
@@ -125,9 +125,327 @@
       ],
       "version": 0
     },
-    "status": "failed",
-    "startedAt": 1780067354342,
-    "endedAt": 1780067354342,
-    "runtimeMs": 0
+    "status": "done",
+    "startedAt": 1780123134419,
+    "endedAt": 1780123141269,
+    "runtimeMs": 6850,
+    "modelProvider": "openai-codex",
+    "model": "gpt-5.4-mini",
+    "contextTokens": 272000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1780123134549,
+      "sessionId": "489a934f-9b3d-4622-bee7-231ee30b7eae",
+      "sessionKey": "agent:main:main",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "workspaceDir": "C:\\Users\\Pugedo\\.openclaw\\workspace",
+      "systemPrompt": {
+        "chars": 6678,
+        "projectContextChars": 0,
+        "nonProjectContextChars": 6678,
+        "hash": "1de46f2280ac8a254d614d5bcc9483b92b626b6f96a2b87d45d0470c63d6db9c"
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\AGENTS.md",
+          "missing": false,
+          "rawChars": 7877,
+          "injectedChars": 7877,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\SOUL.md",
+          "missing": false,
+          "rawChars": 1634,
+          "injectedChars": 1634,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\TOOLS.md",
+          "missing": false,
+          "rawChars": 910,
+          "injectedChars": 910,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\IDENTITY.md",
+          "missing": false,
+          "rawChars": 660,
+          "injectedChars": 660,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\USER.md",
+          "missing": false,
+          "rawChars": 538,
+          "injectedChars": 538,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "C:\\Users\\Pugedo\\.openclaw\\workspace\\HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 12,
+          "injectedChars": 0,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 10291,
+        "hash": "f30ca313d128163f02ddee85f35c87f7b764d70db915eba868e068d1fadea06c",
+        "entries": [
+          {
+            "name": "browser-automation",
+            "blockChars": 324
+          },
+          {
+            "name": "canvas",
+            "blockChars": 267
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 270
+          },
+          {
+            "name": "feishu-doc",
+            "blockChars": 255
+          },
+          {
+            "name": "feishu-drive",
+            "blockChars": 247
+          },
+          {
+            "name": "feishu-perm",
+            "blockChars": 269
+          },
+          {
+            "name": "feishu-wiki",
+            "blockChars": 249
+          },
+          {
+            "name": "find-skills",
+            "blockChars": 487
+          },
+          {
+            "name": "gemini",
+            "blockChars": 255
+          },
+          {
+            "name": "github",
+            "blockChars": 280
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 282
+          },
+          {
+            "name": "humanizer",
+            "blockChars": 598
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 255
+          },
+          {
+            "name": "microsoft-foundry",
+            "blockChars": 1180
+          },
+          {
+            "name": "nano-pdf",
+            "blockChars": 238
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 285
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 281
+          },
+          {
+            "name": "notion",
+            "blockChars": 210
+          },
+          {
+            "name": "python-debugpy",
+            "blockChars": 269
+          },
+          {
+            "name": "self-improvement",
+            "blockChars": 643
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 263
+          },
+          {
+            "name": "spike",
+            "blockChars": 255
+          },
+          {
+            "name": "supabase",
+            "blockChars": 623
+          },
+          {
+            "name": "supabase-postgres-best-practices",
+            "blockChars": 379
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 285
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 295
+          },
+          {
+            "name": "weather",
+            "blockChars": 270
+          },
+          {
+            "name": "whatsapp-instagram-google",
+            "blockChars": 327
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 60,
+        "entries": [
+          {
+            "name": "cron",
+            "summaryChars": 3610,
+            "summaryHash": "262e6a7b421538d13ca6d79fc14616de3ea0c24fde8b050d6fa1652fe991e5c5",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "image_generate",
+            "summaryChars": 392,
+            "summaryHash": "57b16a66f72edadb1640a608d9f2761fd8d237e124b275d16d74356df5d95c8b",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "video_generate",
+            "summaryChars": 231,
+            "summaryHash": "5687c06e790e0aa0dc7b14d72f33407b8c6443da755aaf7b68902253fb83cb3e",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 135,
+            "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 117,
+            "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 224,
+            "summaryHash": "56fd935fc97400f8c60b16ae58268660a2d84d8014a60abed515576c45a6f307",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 332,
+            "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 79,
+            "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+            "schemaChars": 60,
+            "schemaHash": "d803b8cd6aef950bd59c7467fe8ce4d612d0730f5b0270a521b792f7ef6e4550",
+            "propertiesCount": 1
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 132,
+            "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 278,
+            "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 65,
+            "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 93,
+            "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "image",
+            "summaryChars": 169,
+            "summaryHash": "a46820ca8952445d3663a8908bfa5d3adddff5b53d18b9d8e9eed8f9e593b494",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 605,
+            "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 239,
+            "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+            "schemaChars": 0,
+            "schemaHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "propertiesCount": null
+          }
+        ]
+      }
+    },
+    "inputTokens": 2956,
+    "outputTokens": 408,
+    "cacheRead": 21888,
+    "cacheWrite": 0,
+    "totalTokens": 24844,
+    "totalTokensFresh": true
   }
 }
