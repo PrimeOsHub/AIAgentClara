@@ -11,9 +11,12 @@ It does not contain an API key or private prompt contents. It only records the r
 ## Prompt Reference
 
 - Agent: CLARA - Prime Odontologia
+- Custom GPT URL: `https://chatgpt.com/g/g-692348a724f88191816bba8f8fccb938-clara`
 - Prompt ID: `pmpt_692f3317d5988193853bae60ded6e87003b5ce12b11ee3a4`
 - Prompt version: `15`
 - Runtime API: OpenAI Responses API
+- Notion source page: `https://www.notion.so/primeos/36f07bdf47878004b0c2c328bcfe121f?source=copy_link`
+- Local mirror: `data/prime-clara-notion.md`
 
 ## Python Usage
 
@@ -54,3 +57,4 @@ response = client.responses.create(
 - 2026-05-30: Recorded CLARA prompt ID `pmpt_692f3317d5988193853bae60ded6e87003b5ce12b11ee3a4`, version `15`.
 - 2026-05-30: Added structured WhatsApp configuration at `docs/clara-whatsapp-config.json`.
 - 2026-05-30: Integrated CLARA WhatsApp prompt into OpenClaw/Codex runtime via `workspace/CLARA_WHATSAPP_PROMPT.md`.
+- 2026-06-01: Recorded Clara Custom GPT URL and canonical Notion source page.

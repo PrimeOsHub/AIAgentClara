@@ -1,0 +1,273 @@
+{
+  "providerId": "codex",
+  "source": "C:\\Users\\Pugedo\\.codex",
+  "target": "C:\\Users\\Pugedo\\.openclaw\\workspace",
+  "summary": {
+    "total": 13,
+    "planned": 0,
+    "migrated": 8,
+    "skipped": 2,
+    "conflicts": 0,
+    "errors": 3,
+    "sensitive": 1
+  },
+  "items": [
+    {
+      "id": "auth:openai-codex",
+      "kind": "auth",
+      "action": "create",
+      "source": "C:\\Users\\Pugedo\\.codex\\auth.json",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\agents\\main\\agent/auth-profiles.json#openai-codex:andrestallion@gmail.com",
+      "status": "migrated",
+      "sensitive": true,
+      "message": "Import Codex OAuth credentials and configure OpenAI Codex models.",
+      "details": {
+        "provider": "openai-codex",
+        "profileId": "openai-codex:andrestallion@gmail.com",
+        "sourceProfileId": "openai-codex:account-83dae3e0-5683-4ed3-b3f6-3f66fbc6d210",
+        "sourceKind": "codex-auth-json",
+        "credentialKind": "[redacted]",
+        "wroteAuthProfile": false,
+        "configUpdated": false,
+        "configPatchReturned": true
+      }
+    },
+    {
+      "id": "auth:openai-codex:config:auth",
+      "kind": "config",
+      "action": "merge",
+      "status": "migrated",
+      "target": "auth",
+      "message": "Configure imported Codex auth profile.",
+      "details": {
+        "path": [
+          "auth"
+        ],
+        "value": {
+          "profiles": {
+            "openai-codex:andrestallion@gmail.com": {
+              "provider": "openai-codex",
+              "mode": "oauth",
+              "email": "andrestallion@gmail.com",
+              "displayName": "Codex import"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "auth:openai-codex:config:agents-defaults",
+      "kind": "config",
+      "action": "merge",
+      "status": "migrated",
+      "target": "agents.defaults",
+      "message": "Configure imported Codex models.",
+      "details": {
+        "path": [
+          "agents",
+          "defaults"
+        ],
+        "value": {
+          "workspace": "C:\\Users\\Pugedo\\.openclaw\\workspace",
+          "models": {
+            "openai/gpt-5.5": {},
+            "openai/codex-auto-review": {},
+            "openai/gpt-5.2": {},
+            "openai/gpt-5.3-codex": {},
+            "openai/gpt-5.4": {},
+            "openai/gpt-5.4-mini": {}
+          },
+          "model": {
+            "primary": "openai/gpt-5.5"
+          }
+        }
+      }
+    },
+    {
+      "id": "skill:find-skills",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\find-skills",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\find-skills",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "find-skills",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:microsoft-foundry",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\microsoft-foundry",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\microsoft-foundry",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "microsoft-foundry",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:supabase",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\supabase",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\supabase",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "supabase",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "skill:supabase-postgres-best-practices",
+      "kind": "skill",
+      "action": "copy",
+      "source": "C:\\Users\\Pugedo\\.agents\\skills\\supabase-postgres-best-practices",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\workspace\\skills\\supabase-postgres-best-practices",
+      "status": "migrated",
+      "message": "Copy personal AgentSkill into this OpenClaw agent workspace.",
+      "details": {
+        "skillName": "supabase-postgres-best-practices",
+        "sourceLabel": "personal AgentSkill"
+      }
+    },
+    {
+      "id": "plugin:browser:1",
+      "kind": "manual",
+      "action": "manual",
+      "source": "C:\\Users\\Pugedo\\.codex\\plugins\\cache\\openai-bundled\\browser\\26.527.31326",
+      "status": "skipped",
+      "message": "Cached Codex plugin bundle found. Review manually unless the plugin is also installed in the source Codex app-server inventory",
+      "reason": "Review the plugin bundle first, then install trusted compatible plugins with openclaw plugins install <path>."
+    },
+    {
+      "id": "plugin:figma",
+      "kind": "plugin",
+      "action": "install",
+      "status": "error",
+      "reason": "failed to install plugin: failed to back up plugin cache entry: Acesso negado. (os error 5)",
+      "source": "openai-curated/figma",
+      "target": "plugins.entries.codex.config.codexPlugins.plugins.figma",
+      "message": "Install Codex plugin \"figma\" in the OpenClaw-managed Codex app-server runtime.",
+      "details": {
+        "configKey": "figma",
+        "marketplaceName": "openai-curated",
+        "pluginName": "figma",
+        "sourceInstalled": true,
+        "sourceEnabled": true,
+        "sourceAppVerification": "not_run",
+        "code": "plugin_install_failed"
+      }
+    },
+    {
+      "id": "plugin:github",
+      "kind": "plugin",
+      "action": "install",
+      "status": "error",
+      "reason": "failed to install plugin: failed to back up plugin cache entry: Acesso negado. (os error 5)",
+      "source": "openai-curated/github",
+      "target": "plugins.entries.codex.config.codexPlugins.plugins.github",
+      "message": "Install Codex plugin \"github\" in the OpenClaw-managed Codex app-server runtime.",
+      "details": {
+        "configKey": "github",
+        "marketplaceName": "openai-curated",
+        "pluginName": "github",
+        "sourceInstalled": true,
+        "sourceEnabled": true,
+        "sourceAppVerification": "not_run",
+        "code": "plugin_install_failed"
+      }
+    },
+    {
+      "id": "plugin:openai-developers",
+      "kind": "plugin",
+      "action": "install",
+      "status": "error",
+      "reason": "failed to install plugin: failed to back up plugin cache entry: Acesso negado. (os error 5)",
+      "source": "openai-curated/openai-developers",
+      "target": "plugins.entries.codex.config.codexPlugins.plugins.openai-developers",
+      "message": "Install Codex plugin \"openai-developers\" in the OpenClaw-managed Codex app-server runtime.",
+      "details": {
+        "configKey": "openai-developers",
+        "marketplaceName": "openai-curated",
+        "pluginName": "openai-developers",
+        "sourceInstalled": true,
+        "sourceEnabled": true,
+        "sourceAppVerification": "not_run",
+        "code": "plugin_install_failed"
+      }
+    },
+    {
+      "id": "config:codex-plugins",
+      "kind": "config",
+      "action": "merge",
+      "target": "plugins.entries.codex.config.codexPlugins",
+      "status": "skipped",
+      "reason": "no selected Codex plugins",
+      "message": "Enable OpenClaw's Codex plugin integration and record migrated source-installed curated plugins.",
+      "details": {
+        "path": [
+          "plugins",
+          "entries",
+          "codex"
+        ],
+        "value": {
+          "enabled": true,
+          "config": {
+            "codexPlugins": {
+              "enabled": true,
+              "allow_destructive_actions": true,
+              "plugins": {
+                "figma": {
+                  "enabled": true,
+                  "marketplaceName": "openai-curated",
+                  "pluginName": "figma"
+                },
+                "github": {
+                  "enabled": true,
+                  "marketplaceName": "openai-curated",
+                  "pluginName": "github"
+                },
+                "openai-developers": {
+                  "enabled": true,
+                  "marketplaceName": "openai-curated",
+                  "pluginName": "openai-developers"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "archive:config.toml",
+      "kind": "archive",
+      "action": "archive",
+      "source": "C:\\Users\\Pugedo\\.codex\\config.toml",
+      "message": "Codex config is archived for manual review; it is not activated automatically",
+      "details": {
+        "archiveRelativePath": "config.toml",
+        "archivePath": "C:\\Users\\Pugedo\\.openclaw\\migration\\codex\\2026-06-01T20-24-51.848Z\\archive\\config.toml"
+      },
+      "status": "migrated",
+      "target": "C:\\Users\\Pugedo\\.openclaw\\migration\\codex\\2026-06-01T20-24-51.848Z\\archive\\config.toml"
+    }
+  ],
+  "warnings": [],
+  "nextSteps": [
+    "Run openclaw doctor after applying the migration.",
+    "Review skipped or auth-required Codex plugin/config/hook items before exposing them in OpenClaw sessions."
+  ],
+  "metadata": {
+    "agentDir": "C:\\Users\\Pugedo\\.openclaw\\agents\\main\\agent",
+    "codexHome": "C:\\Users\\Pugedo\\.codex",
+    "codexSkillsDir": "C:\\Users\\Pugedo\\.codex\\skills",
+    "personalAgentsSkillsDir": "C:\\Users\\Pugedo\\.agents\\skills"
+  },
+  "backupPath": "C:\\Users\\Pugedo\\2026-06-01T17-24-51.849-03-00-openclaw-backup.tar.gz",
+  "reportDir": "C:\\Users\\Pugedo\\.openclaw\\migration\\codex\\2026-06-01T20-24-51.848Z"
+}

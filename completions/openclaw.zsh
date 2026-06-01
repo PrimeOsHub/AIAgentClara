@@ -12,7 +12,7 @@ _openclaw_root_completion() {
     "--profile[Use a named profile (isolates OPENCLAW_STATE_DIR/OPENCLAW_CONFIG_PATH under ~/.openclaw-<name>)]" \
     "--log-level[Global log level override for file + console (silent|fatal|error|warn|info|debug|trace)]" \
     "--no-color[Disable ANSI colors]" \
-    "1: :_values 'command' 'completion[Generate shell completion script]' 'crestodian[Open the ring-zero setup and repair helper]' 'setup[Create baseline config/workspace files; use --wizard for full onboarding]' 'onboard[Guided setup for auth, models, Gateway, workspace, channels, and skills]' 'configure[Interactive configuration for credentials, channels, gateway, and agent defaults]' 'config[Non-interactive config helpers (get/set/patch/unset/file/schema/validate). Run without subcommand for guided setup.]' 'backup[Create and verify local backup archives for OpenClaw state]' 'migrate[Import state from another agent system]' 'doctor[Health checks + quick fixes for the gateway and channels]' 'dashboard[Open the Control UI with your current token]' 'reset[Reset local config/state (keeps the CLI installed)]' 'uninstall[Uninstall the gateway service + local data (CLI remains)]' 'message[Send, read, and manage messages and channel actions]' 'mcp[Manage OpenClaw MCP config and channel bridge]' 'transcripts[Inspect stored transcripts]' 'agent[Run an agent turn via the Gateway (use --local for embedded)]' 'agents[Manage isolated agents (workspaces + auth + routing)]' 'status[Show channel health and recent session recipients]' 'health[Fetch health from the running gateway]' 'sessions[List stored conversation sessions]' 'commitments[List and manage inferred follow-up commitments]' 'tasks[Inspect durable background tasks and TaskFlow state]' 'acp[Run an ACP bridge backed by the Gateway]' 'gateway[Run, inspect, and query the WebSocket Gateway]' 'daemon[Manage the Gateway service (launchd/systemd/schtasks)]' 'logs[Tail gateway file logs via RPC]' 'system[System tools (events, heartbeat, presence)]' 'models[Model discovery, scanning, and configuration]' 'infer[Run provider-backed inference commands through a stable CLI surface]' 'approvals[Manage exec approvals (gateway or node host)]' 'exec-policy[Show or synchronize requested exec policy with host approvals]' 'nodes[Manage gateway-owned nodes (pairing, status, invoke, and media)]' 'devices[Device pairing and auth tokens]' 'node[Run and manage the headless node host service]' 'sandbox[Manage sandbox containers (Docker-based agent isolation)]' 'tui[Open a terminal UI connected to the Gateway]' 'cron[Manage cron jobs (via Gateway)]' 'dns[DNS helpers for wide-area discovery (Tailscale + CoreDNS)]' 'docs[Search the live OpenClaw docs]' 'proxy[Run the OpenClaw debug proxy and inspect captured traffic]' 'hooks[Manage internal agent hooks]' 'webhooks[Webhook helpers and integrations]' 'qr[Generate a mobile pairing QR code and setup code]' 'clawbot[Legacy clawbot command aliases]' 'pairing[Secure DM pairing (approve inbound requests)]' 'plugins[Manage OpenClaw plugins and extensions]' 'channels[Manage connected chat channels and accounts]' 'directory[Lookup contact and group IDs (self, peers, groups) for supported chat channels]' 'security[Audit local config and state for common security foot-guns]' 'secrets[Secrets runtime controls]' 'skills[List and inspect available skills]' 'update[Update OpenClaw and inspect update channel status]' 'browser[Manage OpenClaw'\''s dedicated browser (Chrome/Chromium)]' 'memory[Search, inspect, and reindex memory files]'" \
+    "1: :_values 'command' 'completion[Generate shell completion script]' 'crestodian[Open the ring-zero setup and repair helper]' 'setup[Create baseline config/workspace files; use --wizard for full onboarding]' 'onboard[Guided setup for auth, models, Gateway, workspace, channels, and skills]' 'configure[Interactive configuration for credentials, channels, gateway, and agent defaults]' 'config[Non-interactive config helpers (get/set/patch/unset/file/schema/validate). Run without subcommand for guided setup.]' 'backup[Create and verify local backup archives for OpenClaw state]' 'migrate[Import state from another agent system]' 'doctor[Health checks + quick fixes for the gateway and channels]' 'dashboard[Open the Control UI with your current token]' 'reset[Reset local config/state (keeps the CLI installed)]' 'uninstall[Uninstall the gateway service + local data (CLI remains)]' 'message[Send, read, and manage messages and channel actions]' 'mcp[Manage OpenClaw MCP config and channel bridge]' 'transcripts[Inspect stored transcripts]' 'agent[Run an agent turn via the Gateway (use --local for embedded)]' 'agents[Manage isolated agents (workspaces + auth + routing)]' 'status[Show channel health and recent session recipients]' 'health[Fetch health from the running gateway]' 'sessions[List stored conversation sessions]' 'commitments[List and manage inferred follow-up commitments]' 'tasks[Inspect durable background tasks and TaskFlow state]' 'acp[Run an ACP bridge backed by the Gateway]' 'gateway[Run, inspect, and query the WebSocket Gateway]' 'daemon[Manage the Gateway service (launchd/systemd/schtasks)]' 'logs[Tail gateway file logs via RPC]' 'system[System tools (events, heartbeat, presence)]' 'models[Model discovery, scanning, and configuration]' 'infer[Run provider-backed inference commands through a stable CLI surface]' 'approvals[Manage exec approvals (gateway or node host)]' 'exec-policy[Show or synchronize requested exec policy with host approvals]' 'nodes[Manage gateway-owned nodes (pairing, status, invoke, and media)]' 'devices[Device pairing and auth tokens]' 'node[Run and manage the headless node host service]' 'sandbox[Manage sandbox containers (Docker-based agent isolation)]' 'tui[Open a terminal UI connected to the Gateway]' 'cron[Manage cron jobs (via Gateway)]' 'dns[DNS helpers for wide-area discovery (Tailscale + CoreDNS)]' 'docs[Search the live OpenClaw docs]' 'proxy[Run the OpenClaw debug proxy and inspect captured traffic]' 'hooks[Manage internal agent hooks]' 'webhooks[Webhook helpers and integrations]' 'qr[Generate a mobile pairing QR code and setup code]' 'clawbot[Legacy clawbot command aliases]' 'pairing[Secure DM pairing (approve inbound requests)]' 'plugins[Manage OpenClaw plugins and extensions]' 'channels[Manage connected chat channels and accounts]' 'directory[Lookup contact and group IDs (self, peers, groups) for supported chat channels]' 'security[Audit local config and state for common security foot-guns]' 'secrets[Secrets runtime controls]' 'skills[List and inspect available skills]' 'update[Update OpenClaw and inspect update channel status]'" \
     "*::arg:->args"
 
   case $state in
@@ -70,8 +70,6 @@ _openclaw_root_completion() {
         (secrets) _openclaw_secrets ;;
         (skills) _openclaw_skills ;;
         (update) _openclaw_update ;;
-        (browser) _openclaw_browser ;;
-        (memory) _openclaw_memory ;;
       esac
       ;;
   esac
@@ -418,6 +416,7 @@ _openclaw_doctor() {
     "--force[Apply aggressive repairs (overwrites custom service config)]" \
     "--non-interactive[Run without prompts (safe migrations only)]" \
     "--generate-gateway-token[Generate and configure a gateway token]" \
+    "--allow-exec[Allow doctor to execute exec SecretRefs while verifying configured secrets]" \
     "--deep[Scan system services for extra gateway installs]" \
     "--lint[Run read-only health checks and report findings]" \
     "--json[With --lint: emit JSON findings instead of human output]" \
@@ -1913,7 +1912,7 @@ _openclaw_models_status() {
     "--probe-timeout[Per-probe timeout in ms]" \
     "--probe-concurrency[Concurrent probes]" \
     "--probe-max-tokens[Probe max tokens (best-effort)]" \
-    "--agent[Agent id to inspect (overrides OPENCLAW_AGENT_DIR/PI_CODING_AGENT_DIR)]"
+    "--agent[Agent id to inspect (overrides OPENCLAW_AGENT_DIR)]"
 }
 
 _openclaw_models_set() {
@@ -2178,7 +2177,7 @@ _openclaw_models() {
   _arguments -C \
     "--status-json[Output JSON (alias for `models status --json`)]" \
     "--status-plain[Plain output (alias for `models status --plain`)]" \
-    "--agent[Agent id to inspect (overrides OPENCLAW_AGENT_DIR/PI_CODING_AGENT_DIR)]" \
+    "--agent[Agent id to inspect (overrides OPENCLAW_AGENT_DIR)]" \
     "1: :_values 'command' 'list[List models (configured by default)]' 'status[Show configured model state]' 'set[Set the default model]' 'set-image[Set the image model]' 'aliases[Manage model aliases]' 'fallbacks[Manage model fallback list]' 'image-fallbacks[Manage image model fallback list]' 'scan[Scan OpenRouter free models for tools + images]' 'auth[Manage model auth profiles]'" \
     "*::arg:->args"
 
@@ -3429,6 +3428,7 @@ _openclaw_cron_add() {
     "--announce[Fallback-deliver final text to a chat]" \
     "--deliver[Deprecated (use --announce). Fallback-delivers final text to a chat.]" \
     "--no-deliver[Disable runner fallback delivery]" \
+    "--webhook[POST the finished payload to a webhook URL]" \
     "--channel[Delivery channel (last|<channel-id>)]" \
     "--to[Delivery destination (E.164, Telegram chatId, or Discord channel/user)]" \
     "--thread-id[Telegram forum topic thread id]" \
@@ -3538,6 +3538,7 @@ _openclaw_cron_edit() {
     "--announce[Fallback-deliver final text to a chat]" \
     "--deliver[Deprecated (use --announce). Fallback-delivers final text to a chat.]" \
     "--no-deliver[Disable runner fallback delivery]" \
+    "--webhook[POST the finished payload to a webhook URL]" \
     "--channel[Delivery channel (last|<channel-id>)]" \
     "--to[Delivery destination (E.164, Telegram chatId, or Discord channel/user)]" \
     "--thread-id[Telegram forum topic thread id]" \
@@ -4367,6 +4368,15 @@ _openclaw_skills_update() {
     "--agent[Target agent workspace (defaults to cwd-inferred, then default agent)]"
 }
 
+_openclaw_skills_verify() {
+  _arguments -C \
+    "--version[Verify a specific version]" \
+    "--tag[Verify a dist tag]" \
+    "--card[Print the generated Skill Card Markdown]" \
+    "--global[Resolve installed skill metadata from the shared managed skills directory]" \
+    "--agent[Target agent workspace (defaults to cwd-inferred, then default agent)]"
+}
+
 _openclaw_skills_list() {
   _arguments -C \
     "--json[Output as JSON]" \
@@ -4393,7 +4403,7 @@ _openclaw_skills() {
   
   _arguments -C \
     "--agent[Target agent workspace (defaults to cwd-inferred, then default agent)]" \
-    "1: :_values 'command' 'search[Search ClawHub skills]' 'install[Install a skill from ClawHub, git, or a local directory]' 'update[Update ClawHub-installed skills in the active or shared managed directory]' 'list[List all available skills]' 'info[Show detailed information about a skill]' 'check[Check which skills are ready, visible, or missing requirements]'" \
+    "1: :_values 'command' 'search[Search ClawHub skills]' 'install[Install a skill from ClawHub, git, or a local directory]' 'update[Update ClawHub-installed skills in the active or shared managed directory]' 'verify[Verify a ClawHub skill with ClawHub]' 'list[List all available skills]' 'info[Show detailed information about a skill]' 'check[Check which skills are ready, visible, or missing requirements]'" \
     "*::arg:->args"
 
   case $state in
@@ -4402,6 +4412,7 @@ _openclaw_skills() {
         (search) _openclaw_skills_search ;;
         (install) _openclaw_skills_install ;;
         (update) _openclaw_skills_update ;;
+        (verify) _openclaw_skills_verify ;;
         (list) _openclaw_skills_list ;;
         (info) _openclaw_skills_info ;;
         (check) _openclaw_skills_check ;;
@@ -4451,368 +4462,6 @@ _openclaw_update() {
         (finalize) _openclaw_update_finalize ;;
         (wizard) _openclaw_update_wizard ;;
         (status) _openclaw_update_status ;;
-      esac
-      ;;
-  esac
-}
-
-_openclaw_browser_status() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_start() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_stop() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_reset_profile() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_tabs() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_tab() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_open() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_focus() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_close() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_profiles() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_create_profile() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_delete_profile() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_doctor() {
-  _arguments -C \
-    "--deep[Run a live snapshot probe]"
-}
-
-_openclaw_browser_screenshot() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_snapshot() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_navigate() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_resize() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_click() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_click_coords() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_type() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_press() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_hover() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_scrollintoview() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_drag() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_select() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_upload() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_waitfordownload() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_download() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_dialog() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_fill() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_wait() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_evaluate() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_console() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_pdf() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_responsebody() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_highlight() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_errors() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_requests() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_trace() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_cookies() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_storage() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser_set() {
-  _arguments -C \
-    
-}
-
-_openclaw_browser() {
-  local -a commands
-  local -a options
-  
-  _arguments -C \
-    "--browser-profile[Browser profile name (default from config)]" \
-    "--json[Output machine-readable JSON]" \
-    "--url[Gateway WebSocket URL (defaults to gateway.remote.url when configured)]" \
-    "--token[Gateway token (if required)]" \
-    "--timeout[Timeout in ms]" \
-    "--expect-final[Wait for final response (agent)]" \
-    "1: :_values 'command' 'status[Show browser status]' 'start[Start the browser (no-op if already running)]' 'stop[Stop the browser (best-effort)]' 'reset-profile[Reset browser profile (moves it to Trash)]' 'tabs[List open tabs]' 'tab[Tab shortcuts (index-based)]' 'open[Open a URL in a new tab]' 'focus[Focus a tab by target id, tab id, label, or unique target id prefix]' 'close[Close a tab (target id optional)]' 'profiles[List all browser profiles]' 'create-profile[Create a new browser profile]' 'delete-profile[Delete a browser profile]' 'doctor[Check browser plugin readiness]' 'screenshot[Capture a screenshot (MEDIA:<path>)]' 'snapshot[Capture a snapshot (default: ai; aria is the accessibility tree)]' 'navigate[Navigate the current tab to a URL]' 'resize[Resize the viewport]' 'click[Click an element by ref from snapshot]' 'click-coords[Click viewport coordinates]' 'type[Type into an element by ref from snapshot]' 'press[Press a key]' 'hover[Hover an element by ai ref]' 'scrollintoview[Scroll an element into view by ref from snapshot]' 'drag[Drag from one ref to another]' 'select[Select option(s) in a select element]' 'upload[Arm file upload for the next file chooser]' 'waitfordownload[Wait for the next download (and save it)]' 'download[Click a ref and save the resulting download]' 'dialog[Arm the next modal dialog (alert/confirm/prompt)]' 'fill[Fill a form with JSON field descriptors]' 'wait[Wait for time, selector, URL, load state, or JS conditions]' 'evaluate[Evaluate a function against the page or a ref]' 'console[Get recent console messages]' 'pdf[Save page as PDF]' 'responsebody[Wait for a network response and return its body]' 'highlight[Highlight an element by ref]' 'errors[Get recent page errors]' 'requests[Get recent network requests (best-effort)]' 'trace[Record a Playwright trace]' 'cookies[Read/write cookies]' 'storage[Read/write localStorage/sessionStorage]' 'set[Browser environment settings]'" \
-    "*::arg:->args"
-
-  case $state in
-    (args)
-      case $line[1] in
-        (status) _openclaw_browser_status ;;
-        (start) _openclaw_browser_start ;;
-        (stop) _openclaw_browser_stop ;;
-        (reset-profile) _openclaw_browser_reset_profile ;;
-        (tabs) _openclaw_browser_tabs ;;
-        (tab) _openclaw_browser_tab ;;
-        (open) _openclaw_browser_open ;;
-        (focus) _openclaw_browser_focus ;;
-        (close) _openclaw_browser_close ;;
-        (profiles) _openclaw_browser_profiles ;;
-        (create-profile) _openclaw_browser_create_profile ;;
-        (delete-profile) _openclaw_browser_delete_profile ;;
-        (doctor) _openclaw_browser_doctor ;;
-        (screenshot) _openclaw_browser_screenshot ;;
-        (snapshot) _openclaw_browser_snapshot ;;
-        (navigate) _openclaw_browser_navigate ;;
-        (resize) _openclaw_browser_resize ;;
-        (click) _openclaw_browser_click ;;
-        (click-coords) _openclaw_browser_click_coords ;;
-        (type) _openclaw_browser_type ;;
-        (press) _openclaw_browser_press ;;
-        (hover) _openclaw_browser_hover ;;
-        (scrollintoview) _openclaw_browser_scrollintoview ;;
-        (drag) _openclaw_browser_drag ;;
-        (select) _openclaw_browser_select ;;
-        (upload) _openclaw_browser_upload ;;
-        (waitfordownload) _openclaw_browser_waitfordownload ;;
-        (download) _openclaw_browser_download ;;
-        (dialog) _openclaw_browser_dialog ;;
-        (fill) _openclaw_browser_fill ;;
-        (wait) _openclaw_browser_wait ;;
-        (evaluate) _openclaw_browser_evaluate ;;
-        (console) _openclaw_browser_console ;;
-        (pdf) _openclaw_browser_pdf ;;
-        (responsebody) _openclaw_browser_responsebody ;;
-        (highlight) _openclaw_browser_highlight ;;
-        (errors) _openclaw_browser_errors ;;
-        (requests) _openclaw_browser_requests ;;
-        (trace) _openclaw_browser_trace ;;
-        (cookies) _openclaw_browser_cookies ;;
-        (storage) _openclaw_browser_storage ;;
-        (set) _openclaw_browser_set ;;
-      esac
-      ;;
-  esac
-}
-
-_openclaw_memory_status() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--json[Print JSON]" \
-    "--deep[Probe embedding provider availability]" \
-    "--index[Reindex if dirty (implies --deep)]" \
-    "--fix[Repair stale recall locks and normalize promotion metadata]" \
-    "--verbose[Verbose logging]"
-}
-
-_openclaw_memory_index() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--force[Force full reindex]" \
-    "--verbose[Verbose logging]"
-}
-
-_openclaw_memory_search() {
-  _arguments -C \
-    "--query[Search query (alternative to positional argument)]" \
-    "--agent[Agent id (default: default agent)]" \
-    "--max-results[Max results]" \
-    "--min-score[Minimum score]" \
-    "--json[Print JSON]"
-}
-
-_openclaw_memory_promote() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--limit[Max candidates]" \
-    "--min-score[Minimum weighted score (default: 0.75)]" \
-    "--min-recall-count[Minimum recall count (default: 3)]" \
-    "--min-unique-queries[Minimum distinct query count (default: 2)]" \
-    "--apply[Append selected candidates to MEMORY.md]" \
-    "--include-promoted[Include already promoted candidates]" \
-    "--json[Print JSON]"
-}
-
-_openclaw_memory_promote_explain() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--include-promoted[Include already promoted candidates]" \
-    "--json[Print JSON]"
-}
-
-_openclaw_memory_rem_harness() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--path[Seed the harness from historical daily memory file(s)]" \
-    "--grounded[Also render a grounded day-level REM preview]" \
-    "--include-promoted[Include already promoted deep candidates]" \
-    "--json[Print JSON]"
-}
-
-_openclaw_memory_rem_backfill() {
-  _arguments -C \
-    "--agent[Agent id (default: default agent)]" \
-    "--path[Historical daily memory file(s) or directory]" \
-    "--rollback[Remove previously written grounded REM backfill entries]" \
-    "--stage-short-term[Also seed grounded durable candidates into the short-term promotion store]" \
-    "--rollback-short-term[Remove previously seeded grounded short-term candidates]" \
-    "--json[Print JSON]"
-}
-
-_openclaw_memory() {
-  local -a commands
-  local -a options
-  
-  _arguments -C \
-     \
-    "1: :_values 'command' 'status[Show memory search index status]' 'index[Reindex memory files]' 'search[Search memory files]' 'promote[Rank short-term recalls and optionally append top entries to MEMORY.md]' 'promote-explain[Explain a specific promotion candidate and its score breakdown]' 'rem-harness[Preview REM reflections, candidate truths, and deep promotions without writing]' 'rem-backfill[Write grounded historical REM summaries into DREAMS.md for UI review]'" \
-    "*::arg:->args"
-
-  case $state in
-    (args)
-      case $line[1] in
-        (status) _openclaw_memory_status ;;
-        (index) _openclaw_memory_index ;;
-        (search) _openclaw_memory_search ;;
-        (promote) _openclaw_memory_promote ;;
-        (promote-explain) _openclaw_memory_promote_explain ;;
-        (rem-harness) _openclaw_memory_rem_harness ;;
-        (rem-backfill) _openclaw_memory_rem_backfill ;;
       esac
       ;;
   esac

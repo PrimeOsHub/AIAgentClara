@@ -6,7 +6,7 @@ _openclaw_completion() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     
     # Simple top-level completion for now
-    opts="completion crestodian setup onboard configure config backup migrate doctor dashboard reset uninstall message mcp transcripts agent agents status health sessions commitments tasks acp gateway daemon logs system models infer approvals exec-policy nodes devices node sandbox tui cron dns docs proxy hooks webhooks qr clawbot pairing plugins channels directory security secrets skills update browser memory --version --container --dev --profile --log-level --no-color"
+    opts="completion crestodian setup onboard configure config backup migrate doctor dashboard reset uninstall message mcp transcripts agent agents status health sessions commitments tasks acp gateway daemon logs system models infer approvals exec-policy nodes devices node sandbox tui cron dns docs proxy hooks webhooks qr clawbot pairing plugins channels directory security secrets skills update --version --container --dev --profile --log-level --no-color"
     
     case "${prev}" in
       completion)
@@ -50,7 +50,7 @@ _openclaw_completion() {
         return 0
         ;;
       doctor)
-        opts=" --no-workspace-suggestions --yes --repair --fix --force --non-interactive --generate-gateway-token --deep --lint --json --severity-min --skip --only"
+        opts=" --no-workspace-suggestions --yes --repair --fix --force --non-interactive --generate-gateway-token --allow-exec --deep --lint --json --severity-min --skip --only"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
@@ -260,22 +260,12 @@ _openclaw_completion() {
         return 0
         ;;
       skills)
-        opts="search install update list info check --agent"
+        opts="search install update verify list info check --agent"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;
       update)
         opts="finalize wizard status --json --no-restart --dry-run --channel --tag --timeout --yes"
-        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-        return 0
-        ;;
-      browser)
-        opts="status start stop reset-profile tabs tab open focus close profiles create-profile delete-profile doctor screenshot snapshot navigate resize click click-coords type press hover scrollintoview drag select upload waitfordownload download dialog fill wait evaluate console pdf responsebody highlight errors requests trace cookies storage set --browser-profile --json --url --token --timeout --expect-final"
-        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-        return 0
-        ;;
-      memory)
-        opts="status index search promote promote-explain rem-harness rem-backfill "
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;

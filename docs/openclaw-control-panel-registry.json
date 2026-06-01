@@ -27,10 +27,20 @@
       "primary_channel": "whatsapp",
       "status": "configured",
       "body_parts_path": "docs/agents/clara",
+      "custom_gpt": {
+        "type": "chatgpt_custom_gpt",
+        "id": "g-692348a724f88191816bba8f8fccb938-clara",
+        "url": "https://chatgpt.com/g/g-692348a724f88191816bba8f8fccb938-clara"
+      },
       "prompt_reference": {
         "type": "openai_prompt",
         "id": "pmpt_692f3317d5988193853bae60ded6e87003b5ce12b11ee3a4",
         "version": "15"
+      },
+      "source_reference": {
+        "type": "notion_page",
+        "url": "https://www.notion.so/primeos/36f07bdf47878004b0c2c328bcfe121f?source=copy_link",
+        "local_mirror": "data/prime-clara-notion.md"
       },
       "routes": {
         "governed_by": "luzia",

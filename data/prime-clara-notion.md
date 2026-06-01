@@ -1,6 +1,6 @@
 # Clara - Ai Agent for Customer Relationship
 
-Source page: [https://www.notion.so/Clara-Ai-Agent-for-Customer-Relationship-2fcb09bd3535805a8e31e0ff81189803](https://www.notion.so/Clara-Ai-Agent-for-Customer-Relationship-2fcb09bd3535805a8e31e0ff81189803)
+Source page: [https://www.notion.so/primeos/36f07bdf47878004b0c2c328bcfe121f?source=copy_link](https://www.notion.so/primeos/36f07bdf47878004b0c2c328bcfe121f?source=copy_link)
 
 ---
 
@@ -1346,4 +1346,3 @@ Versão: 1.0
 Responsável: ___________________
 
 ## Assinatura Digital: ___________________
-
