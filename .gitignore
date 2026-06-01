@@ -15,11 +15,21 @@ config.private.json
 
 # OpenClaw System Logs and Caches
 logs/
+*.log
 .cache/
 tmp/
 
 # Credentials and Local Backups
 credentials/
+devices/*.json
+agents/main/agent/codex-home/auth.json
+agents/main/agent/auth-state.json
+agents/main/agent/auth-profiles.json
+plugin-state/
+plugins/installs.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 workspace/
 *.bak
 *.bak.*
@@ -38,11 +48,15 @@ openclaw.json.bak
 openclaw.json.bak.*
 
 agents/
+!docs/agents/
+!docs/agents/**
 control-ui-custom/
 extensions/
 flows/
 identity/
 npm/
+dist/
+**/dist/
 plugin-skills/
 tasks/
 tools/

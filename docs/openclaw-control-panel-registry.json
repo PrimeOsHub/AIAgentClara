@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "updated": "2026-05-30",
+  "purpose": "Tracked control-panel registry for OpenClaw agents and their body-parts files.",
+  "agents": [
+    {
+      "id": "luzia",
+      "display_name": "Luzia",
+      "role": "AI Agent Government for PrimeOS App Hub and OpenClaw Control.",
+      "primary_channel": "openclaw_control_panel",
+      "status": "configured",
+      "body_parts_path": "docs/agents/luzia",
+      "prompt_reference": {
+        "type": "chatgpt_custom_gpt",
+        "id": "g-6a1b08efb08c8191af2c468bee4bc65d-luzia",
+        "url": "https://chatgpt.com/g/g-6a1b08efb08c8191af2c468bee4bc65d-luzia"
+      },
+      "routes": {
+        "governs": ["clara", "codex"],
+        "hands_off_to": ["codex", "human_owner"]
+      }
+    },
+    {
+      "id": "clara",
+      "display_name": "Clara",
+      "role": "Prime Odontologia WhatsApp relationship agent.",
+      "primary_channel": "whatsapp",
+      "status": "configured",
+      "body_parts_path": "docs/agents/clara",
+      "prompt_reference": {
+        "type": "openai_prompt",
+        "id": "pmpt_692f3317d5988193853bae60ded6e87003b5ce12b11ee3a4",
+        "version": "15"
+      },
+      "routes": {
+        "governed_by": "luzia",
+        "hands_off_to": ["codex", "human_owner"]
+      }
+    },
+    {
+      "id": "codex",
+      "display_name": "Codex",
+      "role": "Implementation, testing, repo, and documentation agent.",
+      "primary_channel": "local_repo",
+      "status": "active",
+      "body_parts_path": "docs/agents/codex",
+      "routes": {
+        "governed_by": "luzia",
+        "implements_for": ["luzia", "clara", "human_owner"]
+      }
+    }
+  ]
+}

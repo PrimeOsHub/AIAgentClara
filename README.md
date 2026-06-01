@@ -25,4 +25,14 @@ This repository contains the OpenClaw AI agent workspace for Clara, the virtual 
 - `docs/clara-whatsapp-config.json` stores the structured WhatsApp prompt configuration.
 - `docs/clara-openai-prompt.md` stores the OpenAI Prompt ID/version reference.
 - `docs/openclaw-codex-clara-integration.md` explains how CLARA is connected to OpenClaw and Codex.
+- `docs/omnichannel-strategy.md` defines how WhatsApp, Instagram, Google, and in-person channels should remain synchronized.
 - `workspace/CLARA_WHATSAPP_PROMPT.md` is the runtime prompt used by OpenClaw/Codex for WhatsApp behavior.
+
+## LUZIA / OpenClaw Control Integration
+
+- `docs/openclaw-control-panel-registry.json` is the tracked control-panel registry for CLARA, LUZIA, and Codex.
+- `docs/agents/` contains complete body-parts packs for each active agent: soul, identity, agents, user, tools, heartbeat, memory, dreams, boot, bootstrap, and README.
+- `workspace/LUZIA_GOVERNMENT_PROMPT.md` is the runtime prompt for LUZIA governance and dashboard coordination.
+- `workspace/.openclaw/control-agents.json` is the local Control Dashboard registry for CLARA, LUZIA, Codex, and future agents.
+- `docs/agents-body-parts.md` defines the agent body-parts documentation model.
+- `docs/luzia-openclaw-control-integration.md` explains the LUZIA integration process and dashboard contract.

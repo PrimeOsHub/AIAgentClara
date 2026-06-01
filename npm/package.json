@@ -16,9 +16,14 @@
       "ip-address",
       "node-domexception",
       "uuid"
+    ],
+    "managedPeerDependencies": [
+      "sharp"
     ]
   },
   "dependencies": {
-    "@openclaw/codex": "2026.5.27"
+    "@openclaw/codex": "2026.5.27",
+    "@openclaw/whatsapp": "2026.5.28",
+    "sharp": "0.34.5"
   }
 }

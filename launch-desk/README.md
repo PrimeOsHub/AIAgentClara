@@ -59,7 +59,7 @@ References:
 3. Add a project API key:
 
    ```bash
-   OPENAI_API_KEY=sk-proj-...
+   OPENAI_API_KEY=your_project_api_key_here
 OPENAI_MODEL=gpt-5.4-mini
 PORT=8787
 CLIENT_ORIGIN=http://127.0.0.1:5173

@@ -6,6 +6,8 @@ Esta skill orienta Clara a atender pacientes e leads pelo WhatsApp, Instagram e 
 
 Para WhatsApp da Prime Odontologia, use `docs/clara-whatsapp-config.json` como configuração estruturada e `workspace/CLARA_WHATSAPP_PROMPT.md` como prompt operacional injetado no OpenClaw/Codex.
 
+Para estratégia omnichannel e continuidade entre canais, use `docs/omnichannel-strategy.md`.
+
 ## Quando usar
 
 - Criar ou adaptar mensagens de atendimento pelo WhatsApp
